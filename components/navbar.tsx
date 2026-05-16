@@ -17,6 +17,15 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    setIsOpen(false)
+    setTimeout(() => {
+      const target = document.querySelector(href)
+      if (target) target.scrollIntoView({ behavior: "smooth" })
+    }, 200)
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
@@ -100,7 +109,7 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, item.href)}
                   className="block text-[#A1A1AA] hover:text-[#00D9FF] transition-colors duration-300 text-lg font-medium py-2"
                 >
                   {item.label}
