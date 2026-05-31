@@ -153,7 +153,7 @@ export function StudioSection() {
               {[
                 { src: "/studio/foto1.jpeg", alt: "Estudio MZTH - Vista general" },
                 { src: "/studio/foto2.jpeg", alt: "Estudio MZTH - Setup de micrófonos" },
-                { src: "/studio/foto4.jpeg", alt: "Estudio MZTH - Cámara" },
+                { src: "/studio/foto8.jpeg", alt: "Estudio MZTH - Cámara" },
               ].map((photo, index) => (
                 <motion.div
                   key={index}
@@ -183,7 +183,7 @@ export function StudioSection() {
               className="relative aspect-[16/7] rounded-2xl overflow-hidden border border-[#222222] hover:border-[#00D9FF]/40 transition-all duration-300 group shadow-lg"
             >
               <img
-                src="/studio/foto3.jpeg"
+                src="/studio/foto9.jpeg"
                 alt="Estudio MZTH - Iluminación"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
